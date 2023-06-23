@@ -13,4 +13,8 @@ public interface PersonajeService {
     //Declaramos el primer método que es para traernos una lista de los personaje
     List<PersonajeEntity> findAll();
     Optional<PersonajeEntity> findById(Long id);
+
+    PersonajeEntity save(PersonajeEntity personajeEntity);
+
+    void delete(Long id);
 }

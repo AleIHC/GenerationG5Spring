@@ -15,6 +15,7 @@ public class PersonajeEntity {
     @Column(name = "profesion")
     private String personajeProfesion;
 
+
     //Constructor lleno
     public PersonajeEntity(String personajeName, Integer personajeEdad, String personajeEspecie, String personajeProfesion) {
         this.personajeName = personajeName;

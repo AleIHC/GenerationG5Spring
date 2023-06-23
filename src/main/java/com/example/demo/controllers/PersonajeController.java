@@ -46,4 +46,18 @@ public class PersonajeController {
         return personajeService.findAll();
     }
 
+    @PostMapping("nuevo")
+    public  ResponseEntity<PersonajeEntity> nuevo(@RequestBody PersonajeEntity personajeEntity) {
+        //System.out.println(personajeEntity.getPersonajeName());
+        //PersonajeEntity nuevoPersonaje = personajeService.save(personajeEntity);
+        return ResponseEntity.ok(personajeService.save(personajeEntity));
+    }
+
+    @DeleteMapping("borrar/{id}")
+    public void eliminarPersona(@PathVariable("id")Long id) {
+        personajeService.delete(id);
+    }
+
+
+
 }

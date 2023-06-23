@@ -30,11 +30,17 @@ public class PersonajeServiceImpl implements PersonajeService {
     public Optional<PersonajeEntity> findById(Long id) {
         Optional<PersonajeEntity> personajeElegido = personajeRepository.findById(id);
         return personajeElegido;
-
     }
 
+    @Override
+    public PersonajeEntity save(PersonajeEntity personajeEntity) {
+        PersonajeEntity nuevoPersonaje = personajeRepository.save(personajeEntity);
+        return nuevoPersonaje;
+    }
 
-
-
+    @Override
+    public void delete(Long id) {
+        personajeRepository.deleteById(id);
+    }
 
 }
